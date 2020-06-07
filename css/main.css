@@ -1,0 +1,314 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	border:red 3px solid
+}
+body input:required:valid,
+body textarea:required:valid {
+	border: green 3px solid
+}
+
+
+body {
+	font-family: "RobotoRegular", sans-serif;
+	font-size: 16px;
+}
+
+.top-header{
+	padding: 0;
+	margin: 0;
+	height: 550px;
+	overflow-y: hidden;
+}
+.top-header1{
+	padding: 0;
+	margin: 0;
+	height: auto;
+	overflow-y: hidden;
+}
+.head-topline{
+	height: 550px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-left: 0px;
+	padding-right:  0px;
+	animation-name: headerLane;
+	animation-duration: 21s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(1, end);
+}
+.head-topline:after{
+	 content: '';
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 background: rgba(0,0,0,.5);
+	 z-index: 2;
+}
+
+@keyframes headerLane {
+  0% {
+      background-image: url(../img/machine/bg1.jpg);
+  }
+  33% {
+      background-image: url(../img/machine/bg2.jpg);
+  }
+  66% {
+      background-image: url(../img/machine/bg3.jpg);
+  }
+  100% {
+      background-image: url(../img/machine/bg4.jpg);
+  }
+}
+.row-top-line{
+	margin-top: 0;
+	height: 70px;
+	background: #32221A;
+	border-bottom: 1px solid #FFD700;
+	z-index: 99;
+	background-size: contain;
+}
+.menu{
+	margin-top: 25px;
+}
+.bars{
+	font-size: 25px;
+	color: silver;
+}
+.bars i{
+	margin-top: 20px;
+}
+.float-menu{
+	display: none;
+	padding: 5px;
+	width: 100px;
+	height: auto;
+	background-color: white;
+	font-size: 14;
+	position: fixed;
+	right: 30px;
+
+}
+.fmenu{
+	margin: 0 auto;
+	padding: 5px;
+	color: black;
+	text-decoration: none;
+
+}
+.a-for-img-top img{
+	margin: 5px 30px 5px 50px;
+	height: 60px;
+}
+.a-for-img-top{
+	font-family: "RighteousRegular";
+	font-size: 35px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	padding: 0 0 35px 0;
+}
+
+.text-question{
+	position: absolute;
+	margin: 150px 65px 0 65px;
+	font-family: "RobotoMedium";
+	color: white;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px black;
+	max-width: 600px;
+	z-index: 99;
+}
+.text-question span{
+	padding: 10px;
+	font-size: 40px;
+}
+.text-question p{
+	font-size: 20px;
+	padding-left: 10px;
+}
+.text-question a{
+	text-decoration-line: none;
+	color: white;
+	margin-left: 20px;
+	font-size: 16px;
+}
+.text-question a:hover{
+	text-decoration-line: underline;
+}
+.a{
+	margin: 10px;
+	padding: 10px 50px;
+	overflow-x: visible;
+	border: none;
+	background: #FFD700;
+	border-radius: 12px;
+	width: 250px;
+	height: 60px;
+	text-decoration: none;
+	text-shadow: 1px 1px 10px black;
+	font-family: "PacificoRegular";
+	font-size: 25px;
+	color: white;
+}
+.a:hover{
+	background-color: #FFA500;
+}
+.a:active{
+	text-transform: uppercase;
+}
+.container{
+	background-color: #F5F5F5;
+	min-height: 500px;
+	max-height: auto;
+}
+
+#app{
+	font-size: 25px;
+	font-family: 'RighteousRegular';
+	margin-left: 10%;
+
+}
+
+.small-container{
+	margin-left: 60px;
+	padding: 15px 35px;
+	display: inline-flex;
+	width: 300px;
+	height: 450px;
+	font-size: 20px;
+	border: 1px solid black;
+	background: white;
+}
+
+.small-container img{
+	width: 230px;
+	height: 230px;
+	margin: 20px auto;
+}
+
+.prem_mach{
+	background-color: #F5F5F5;
+	height: 600px;
+	text-align: center;
+	border-top: 1px solid #FFD700;
+	margin: 0 auto;
+}
+.small-prem-mach{
+	margin-top: 20px;
+	margin-left: 33% ;
+	padding: 20px;
+	width: 400px;
+	border: 5px solid grey;
+	box-shadow: 3px 3px 3px 7px #C0C0C0;
+	background: rgba(240, 230, 140, 0.5);
+	background-size: contain;
+}
+.discount{
+	width: 155px;
+	height: 30px;
+	font-family: 'RobotoLight'
+	font-size: 16px;
+	color: white;
+	border: 1px solid grey;
+	background: #FFD700;
+	margin-left: -50px;
+	text-shadow: 1px 1px 2px black;
+	padding: 3px;
+}
+.small-prem-mach img{
+	width: 350px;
+}
+footer{
+	height: 180px;
+	background: #32221A;
+	border-top: 2px solid #FFD700;
+}
+.copy{
+	margin: -25px 50px 0px 30px;
+	padding-top: 2px;
+	color: silver;
+	font-size: 14px;
+}
+#preloder{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: white;
+	z-index: 100;
+}
+.loader{
+	width: 60%;
+	height: 80%;
+	position: absolute;
+	margin: 1% 20% auto;
+	background: url("../img/machine/cl.gif");
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 1001;
+}
+.fall{
+	position: absolute !important;
+}
+.pic{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding: 0px;
+	margin: 0 auto;
+	position: static;
+	top: -25px;
+	background-size: contain;
+	z-index: -1;
+}
+.pic img{
+	margin-top: 0;
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+}
+.vvvv{
+	margin: 0 auto;
+	padding: 10px;
+	font-family: "RighteousRegular";
+	font-size: 30px;
+}
+.a1{
+	position: absolute;
+	top: 70%;
+	left: 10%;
+	border: none;
+	background: #FFD700;
+	border-radius: 12px;
+	width: 150px;
+	height: auto;
+	text-decoration: none;
+	text-align: center;
+	text-shadow: 1px 1px 10px black;
+	font-family: "PacificoRegular";
+	font-size: 25px;
+	color: white;
+	z-index: 300;
+}
+.a1:hover{
+	background-color: #FFA500;
+}
+.a1:active{
+	text-transform: uppercase;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, Vue.js</title>
+    <!--совместимость с поседней вверсией EI-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--адаптивность-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--подключение иконки для закладки сайта-->
+    <link rel="shortcut icon" href="img\g.png" />
+    <!--сетка бутстрап-->
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
+    <!--библиотека с иконками-->
+    <link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />
+<!-- https://weatherless.ru/javascript/jquery/owl-carousel-v-2-0-nastrojki/ -->
+    <link rel="stylesheet" href="libs\OwlCarousel2-2.3.4\docs\assets\owlcarousel\assets\owl.carousel.min.css" />
+    <link rel="stylesheet" href="libs\OwlCarousel2-2.3.4\docs\assets\owlcarousel\assets\owl.theme.default.min.css" />
+    <link rel="stylesheet" href="libs/countdown/jquery.countdown.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+
+
+
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+    <div class="a-for-img-top fall col-lg-4 col-md-6 col-sm-10 col-xs-10">
+      <a href="index.html"> <img src="img/machine/clock.jpg" alt=""></a>
+      <a href="index.html" class='hidden-xs hidden-sm'>Time machine </a>
+    </div>
+    <div class="container-pic">
+      <div class="pic">
+        <div class="vvvv" v-for="as in r.slice(0-1)">
+        <img :src="'img/location/' + as.url" >
+        <div id="textVue" hidden>
+          {{as.name}}
+        </div>
+      </div>
+      </div>
+    </div>
+    <a class="a1" hidden href="jumping.html">Try Again</a>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>   <!--  include VUE-->
+
+    <script>
+      const app = new Vue({
+        el: '.pic',
+        data: {
+          a_list:[
+            {
+              name:"in the Triassic period! Although, no, you are in the Jurassic period! You should hide somewhere.",
+              url:'loc1.jpg'
+            },
+            {
+              name:"in the Cretaceous period! It's a pity that you didn't get enough air before you left. Try to find land.",
+              url:'loc2.jpg'
+            },
+            {
+              name:"in the city of the future! Congratulations! This is one of the best eras... everyone says that.",
+              url:'loc3.jpg'
+            },
+            {
+              name:"in a ruined future. Try to find out why humanity died out.",
+              url:'loc4.jpg'
+            },
+            {
+              name:"in the past. Factories and factories are just beginning to exist.",
+              url:'loc5.jpg'
+            },
+            {
+              name:"in an old village at the foot of a mountain. Remember 'Game of thrones' and compare!",
+              url:'loc6.jpg'
+            },
+            {
+              name:"in the suffering middle ages! Oh no, wait, you are in the farmer's houses of the game 'Heroes of the sword and magiс 5'.",
+              url:'loc7.jpg'
+            }
+          ]
+        },
+        computed: {
+          //Рандом картинок
+          r: function() {
+            return this.a_list.sort((a, b) => Math.random() > .5 ? -1 : 1);
+          }
+        }
+      })
+
+    </script>
+
+
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/es5-shim.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    <![endif]-->
+    <script src="libs/jquery/jquery-1.11.1.min.js"></script>
+    <script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+    <script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="libs/waypoints/waypoints-1.6.2.min.js"></script>
+    <script src="libs/scrollto/jquery.scrollTo.min.js"></script>
+    <script src="libs\OwlCarousel2-2.3.4\docs\assets\owlcarousel\owl.carousel.min.js"></script>
+    <script src="libs/countdown/jquery.plugin.js"></script>
+    <script src="libs/countdown/jquery.countdown.min.js"></script>
+    <script src="libs/countdown/jquery.countdown-ru.js"></script>
+    <script src="libs/landing-nav/navigation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
